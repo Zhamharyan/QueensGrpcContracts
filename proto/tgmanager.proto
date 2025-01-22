@@ -17,9 +17,11 @@ message CheckTelegramUserSubscribeResponse {
 }
 
 message LoginRequest {
-  string telegramData = 1;
+  string initData = 1;
 }
 
 message LoginResponse {
-  string telegramData = 1;
+  int64   telegramUserId = 1;
+  string  botId = 2;
+  int64   botInternalId = 3;
 }
