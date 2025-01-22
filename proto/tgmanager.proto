@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package grpc.users;
+
+service TgManagerService {
+  rpc Login(LoginRequest) returns (LoginResponse);
+  rpc CheckTelegramUserSubscribe(CheckTelegramUserSubscribeRequest) returns (CheckTelegramUserSubscribeResponse);
+}
+
+message CheckTelegramUserSubscribeRequest {
+  int64 telegramUserId = 1;
+  string telegramChannelId = 2;
+}
+
+message CheckTelegramUserSubscribeResponse {
+  bool exists = 1;
+}
+
+message LoginRequest {
+  string telegramData = 1;
+}
+
+message LoginResponse {
+  string telegramData = 1;
+}
