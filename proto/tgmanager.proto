@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package grpc.users;
+package grpc.tgmanager;
 
 service TgManagerService {
   rpc Login(LoginRequest) returns (LoginResponse);
